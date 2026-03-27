@@ -13,11 +13,14 @@ Analyze multiple alerts within an Endpoint Detection & Response (EDR) platform t
 ---
 
 ## 🚨 Alert 1: Initial Access via Malicious Office Document
+![Initial Access](screenshots/initial-access.png)
 
 ### Summary
 A user opened a macro-enabled Word document (`invoice.docm`) which triggered a chain of events resulting in an attempted payload download from an external domain.
 
 ### Process Chain
+![Process Chain](screenshots/process-chain.png)
+
 WINWORD.EXE → CMD.EXE → cURL.EXE → install.exe
 
 ### Key Findings
@@ -45,11 +48,14 @@ WINWORD.EXE → CMD.EXE → cURL.EXE → install.exe
 ---
 
 ## 🚨 Alert 2: Credential Dumping via LSASS Memory Access
+![LSASS Dump](screenshots/lsass-dump.png)
 
 ### Summary
 A suspicious executable (`syncsvc.exe`) accessed LSASS memory, indicating credential dumping activity on the host.
 
 ### Process Chain
+![Process Chain](screenshots/process-chain.png)
+
 explorer.exe → syncsvc.exe → lsass.exe
 
 ### Key Findings
@@ -59,6 +65,8 @@ explorer.exe → syncsvc.exe → lsass.exe
 - Persistence mechanism identified via registry key
 
 ### Indicators of Compromise (IOCs)
+![IOCs](screenshots/iocs.png)
+
 - File: `syncsvc.exe`
 - Path: `C:\Users\haris.khan\AppData\Local\Temp\syncsvc.exe`
 - Domain: `files-wetransfer.com`
@@ -80,6 +88,7 @@ explorer.exe → syncsvc.exe → lsass.exe
 ---
 
 ## 🚨 Alert 3: Execution from AppData Directory
+![AppData Execution](screenshots/appdata-execution.png)
 
 ### Summary
 An executable (`UpdateAgent.exe`) was detected running from a user AppData directory, initially flagged due to unusual execution location.
@@ -132,5 +141,6 @@ This investigation demonstrates the ability to:
 
 ## 🧠 Key Takeaway
 Even when security tools perform automated actions, a SOC analyst must validate, interpret, and assess the activity to ensure accurate threat detection and response.
-- Distinguish between malicious and benign activity
+
+- Distinguish between malicious and benign activity  
 - Recommend appropriate response actions

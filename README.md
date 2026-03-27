@@ -6,17 +6,16 @@ My hands-on cybersecurity labs, SOC analysis, and digital forensics investigatio
 
 ## 🔍 Projects
 
-### 🔎 Digital Forensics Investigation (Autopsy)
-Analyzed a disk image using Autopsy to identify artifacts, recover files, and document findings as part of a forensic investigation.
+### 🔍 Digital Forensics Investigation (Autopsy)
+Conducted a forensic analysis of a Windows 11 disk image using Autopsy to identify suspicious files, recover deleted evidence, and document artifacts related to possible unauthorized access and data exfiltration.
 
 **Key Skills:**
-- Disk Forensics
-- Evidence Analysis
-- File Recovery
-- Artifact Identification
+- Digital Forensics
+- Artifact Analysis
+- Deleted File Recovery
+- Event Log Review
 
-👉 [View Project](./writeups/autopsy-digital-forensics.md)
-
+👉 [View Project](writeups/autopsy-digital-forensics.md)
 ---
 
 ### 🛡 SOC Alert Triage (TryHackMe)

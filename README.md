@@ -1,30 +1,34 @@
 # cybersecurity-portfolio
+
 My hands-on cybersecurity labs, SOC analysis, and digital forensics investigations.
-## 🔍 Projects
 
 ---
 
-### 💻 Digital Forensics Investigation (Autopsy)
+## 🔍 Projects
+
+### 🔎 Digital Forensics Investigation (Autopsy)
 Analyzed a disk image using Autopsy to identify artifacts, recover files, and document findings as part of a forensic investigation.
 
 **Key Skills:**
 - Disk Forensics
-- Artifact Analysis
-- Evidence Recovery
+- Evidence Analysis
+- File Recovery
+- Artifact Identification
 
-👉 [View Project](writeups/digital-forensics-investigation.md)
+👉 [View Project](./writeups/autopsy-digital-forensics.md)
 
 ---
 
-### 🛡️ SOC Alert Triage (TryHackMe)
+### 🛡 SOC Alert Triage (TryHackMe)
 Investigated phishing alerts, identified malicious indicators, classified true positives, and documented incident reports in a simulated SOC environment.
 
 **Key Skills:**
 - Alert Triage
-- IOC Analysis
-- Threat Classification
+- Phishing Analysis
+- IOC Identification
+- Incident Classification
 
-👉 [View Project](writeups/create-soc-alert-triage.md)
+👉 [View Project](./writeups/soc-alert-triage.md)
 
 ---
 
@@ -36,5 +40,7 @@ Analyzed a simulated endpoint detection alert involving malicious Office documen
 - Process Chain Investigation
 - IOC Identification
 - Threat Detection
+- MITRE ATT&CK Mapping
+- Incident Response
 
-👉 [View Full Investigation](edr-alert-investigation.md)
+👉 [View Full Investigation](./edr-alert-investigation.md)

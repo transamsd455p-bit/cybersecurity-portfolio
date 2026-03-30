@@ -43,3 +43,12 @@ Analyzed a simulated endpoint detection alert involving malicious Office documen
 - Incident Response
 
 👉 [View Full Investigation](writeups/edr-alert-investigation.md)
+
+---
+
+### 🔐 SIEM Investigation: CryptoMiner Detection
+
+Analyzed a SIEM-generated alert to identify and respond to unauthorized cryptomining activity.  
+Performed alert triage, event log analysis, and rule validation to confirm a true positive and isolate the affected host.
+
+👉 [View Project](writeups/siem-investigation.md)

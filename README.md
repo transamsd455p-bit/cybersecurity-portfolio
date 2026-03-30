@@ -1,54 +1,62 @@
 # cybersecurity-portfolio
 
-My hands-on cybersecurity labs, SOC analysis, and digital forensics investigations.
+Hands-on cybersecurity labs focused on SOC analysis, threat detection, and digital forensics investigations.  
+Each project demonstrates practical, real-world analysis beyond guided labs.
 
 ---
 
 ## 🔍 Projects
 
-### 🔍 Digital Forensics Investigation (Autopsy)
-Conducted a forensic analysis of a Windows 11 disk image using Autopsy to identify suspicious files, recover deleted evidence, and document artifacts related to possible unauthorized access and data exfiltration.
+### 🧪 Digital Forensics Investigation (Autopsy)
+Conducted a forensic analysis of a Windows 11 disk image using Autopsy to identify suspicious files, recover deleted evidence, and analyze system artifacts related to potential unauthorized access and data exfiltration.
 
 **Key Skills:**
-- Digital Forensics
-- Artifact Analysis
-- Deleted File Recovery
-- Event Log Review
+- Digital Forensics  
+- Artifact Analysis  
+- Deleted File Recovery  
+- Event Log Analysis  
 
 👉 [View Project](writeups/autopsy-digital-forensics.md)
+
 ---
 
 ### 🛡 SOC Alert Triage (TryHackMe)
-Investigated phishing alerts, identified malicious indicators, classified true positives, and documented incident reports in a simulated SOC environment.
+Investigated phishing alerts in a simulated SOC environment, identified malicious indicators, classified true positives, and documented findings through structured incident reports.
 
 **Key Skills:**
-- Alert Triage
-- Phishing Analysis
-- IOC Identification
-- Incident Classification
+- Alert Triage  
+- Phishing Analysis  
+- IOC Identification  
+- Incident Classification  
 
-👉 [View Project](./writeups/soc-alert-triage.md)
+👉 [View Project](writeups/soc-alert-triage.md)
 
 ---
 
 ### 🚨 EDR Alert Investigation (TryHackMe)
-Analyzed a simulated endpoint detection alert involving malicious Office document execution, credential dumping via LSASS, and suspicious AppData activity.
+Analyzed a simulated endpoint detection alert involving malicious Office document execution, credential dumping via LSASS, and suspicious process activity within the AppData directory.
 
 **Key Skills:**
-- EDR Analysis
-- Process Chain Investigation
-- IOC Identification
-- Threat Detection
-- MITRE ATT&CK Mapping
-- Incident Response
+- EDR Analysis  
+- Process Chain Investigation  
+- IOC Identification  
+- Threat Detection  
+- MITRE ATT&CK Mapping  
+- Incident Response  
 
-👉 [View Full Investigation](writeups/edr-alert-investigation.md)
+👉 [View Project](writeups/edr-alert-investigation.md)
 
 ---
 
 ### 🔐 SIEM Investigation: CryptoMiner Detection
+Analyzed a SIEM-generated alert to investigate unauthorized cryptomining activity. Performed event log analysis, validated detection rules, identified indicators of compromise, and executed appropriate incident response actions.
 
-Analyzed a SIEM-generated alert to identify and respond to unauthorized cryptomining activity.  
-Performed alert triage, event log analysis, and rule validation to confirm a true positive and isolate the affected host.
+**Key Skills:**
+- SIEM Analysis  
+- Log Analysis  
+- Threat Detection  
+- IOC Identification  
+- MITRE ATT&CK Mapping  
+- Incident Response  
 
 👉 [View Project](writeups/siem-investigation.md)

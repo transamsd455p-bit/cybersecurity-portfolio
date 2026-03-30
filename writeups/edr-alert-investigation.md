@@ -176,5 +176,4 @@ This investigation demonstrates the ability to:
 
 Effective SOC analysis requires more than acknowledging alerts. It involves validating activity, understanding attacker behavior, and applying context to determine whether an event represents a real threat.
 
-This investigation reflects real-world SOC workflows by combining detection, analysis, and response into a structured investigative process.pret, and assess the activity to ensure accurate threat detection and response.
-
+This investigation reflects real-world SOC workflows by combining detection, analysis, and response into a structured investigative process.

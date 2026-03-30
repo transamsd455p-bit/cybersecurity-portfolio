@@ -42,4 +42,4 @@ Analyzed a simulated endpoint detection alert involving malicious Office documen
 - MITRE ATT&CK Mapping
 - Incident Response
 
-👉 [View Full Investigation](./edr-alert-investigation.md)
+👉 [View Full Investigation](writeups/edr-alert-investigation.md)

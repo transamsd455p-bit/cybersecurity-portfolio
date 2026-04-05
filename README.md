@@ -1,40 +1,55 @@
-# cybersecurity-portfolio
+# Cybersecurity Portfolio
 
-Hands-on cybersecurity labs focused on SOC analysis, threat detection, and digital forensics investigations.  
-Each project demonstrates practical, real-world analysis beyond guided labs.
+Hands-on cybersecurity portfolio focused on SOC alert triage, SIEM investigations, EDR analysis, and Windows digital forensics.
+
+This repository showcases practical investigations completed through platforms such as TryHackMe and WGU, with an emphasis on real-world analyst thinking, log analysis, incident documentation, and evidence-based conclusions.
 
 ---
 
-## 🔍 Projects
+## Core Skills Demonstrated
+
+- SOC alert triage and incident analysis  
+- Splunk SIEM log investigation  
+- Phishing analysis and IOC identification  
+- EDR alert review and process analysis  
+- Windows digital forensics using Autopsy  
+- Evidence handling, documentation, and reporting  
+
+---
+
+## Featured Projects
+
+### 🔐 SIEM Investigation: CryptoMiner Detection
+- Investigated a SIEM alert related to unauthorized cryptomining activity  
+- Analyzed event logs, validated detection logic, and identified indicators of compromise  
+- Documented findings and response actions based on observed behavior  
+
+👉 [View Project](writeups/siem-investigation.md)
+
+---
 
 ### 🧪 Digital Forensics Investigation (Autopsy)
-Conducted a forensic analysis of a Windows 11 disk image using Autopsy to identify suspicious files, recover deleted evidence, and analyze system artifacts related to potential unauthorized access and data exfiltration.
-
-**Key Skills:**
-- Digital Forensics  
-- Artifact Analysis  
-- Deleted File Recovery  
-- Event Log Analysis  
+- Performed forensic analysis of a Windows 11 disk image using Autopsy  
+- Examined browser artifacts, event logs, prefetch files, and deleted data  
+- Identified suspicious files and potential data exfiltration activity  
 
 👉 [View Project](writeups/autopsy-digital-forensics.md)
 
 ---
 
 ### 🛡 SOC Alert Triage (TryHackMe)
-Investigated phishing alerts in a simulated SOC environment, identified malicious indicators, classified true positives, and documented findings through structured incident reports.
-
-**Key Skills:**
-- Alert Triage  
-- Phishing Analysis  
-- IOC Identification  
-- Incident Classification  
+- Investigated phishing-related alerts in a simulated SOC environment  
+- Identified malicious indicators and classified alerts as true positives  
+- Documented findings and recommended response actions  
 
 👉 [View Project](writeups/soc-alert-triage.md)
 
 ---
 
+## 🔍 Projects
+
 ### 🚨 EDR Alert Investigation (TryHackMe)
-Analyzed a simulated endpoint detection alert involving malicious Office document execution, credential dumping via LSASS, and suspicious process activity within the AppData directory.
+Analyzed an endpoint detection alert involving malicious Office document execution, credential dumping via LSASS, and suspicious process activity within the AppData directory.
 
 **Key Skills:**
 - EDR Analysis  

@@ -177,3 +177,28 @@ This investigation demonstrates the ability to:
 Effective SOC analysis requires more than acknowledging alerts. It involves validating activity, understanding attacker behavior, and applying context to determine whether an event represents a real threat.
 
 This investigation reflects real-world SOC workflows by combining detection, analysis, and response into a structured investigative process.
+
+---
+
+## 🧠 Analyst Decision
+
+**Severity:** High  
+
+**Verdict:** True Positive (Multi-Stage Attack Activity Observed)  
+
+**Key Indicators:**  
+- Malicious macro execution from Office document (`invoice.docm`)  
+- Suspicious process chain (WINWORD → CMD → cURL → payload)  
+- Credential dumping behavior via LSASS access  
+- Execution of binary from AppData directory  
+- Registry-based persistence mechanism  
+
+**Summary:**  
+The investigation identified a multi-stage attack involving phishing-based initial access, attempted payload delivery, and confirmed credential dumping activity. While one alert was determined to be a false positive, the overall activity indicates a compromised endpoint with attacker persistence and credential access behavior.
+
+**Recommended Actions:**  
+- Isolate affected endpoints immediately  
+- Reset potentially compromised credentials  
+- Remove malicious files and persistence mechanisms  
+- Conduct lateral movement and authentication log review  
+- Tune detection rules to reduce false positives  

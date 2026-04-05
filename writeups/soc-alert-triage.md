@@ -1,12 +1,12 @@
 # 🛡️ SOC Alert Triage – Phishing Investigation
 
 ## 📌 Overview
-Analyzed inbound phishing alerts in a simulated SOC environment using TryHackMe. The investigation focused on validating alerts, identifying malicious indicators, and determining whether activity represented a true security threat.
+Investigated phishing alerts in a simulated SOC environment using TryHackMe. The analysis focused on validating indicators, correlating activity, and determining whether the alert represented a true security threat.
 
 ---
 
 ## 🎯 Objective
-Determine whether alerts were true positives or false positives by analyzing email characteristics, embedded links, and supporting network activity.
+Determine whether the alert was a true positive or false positive by analyzing email characteristics, embedded links, and related network activity.
 
 ---
 
@@ -14,7 +14,7 @@ Determine whether alerts were true positives or false positives by analyzing ema
 
 ### 1. Email Analysis
 - Reviewed sender address, subject line, and timestamps  
-- Identified spoofed domains attempting to impersonate legitimate services  
+- Identified spoofed domains impersonating legitimate services  
 - Observed urgency-based language commonly used in phishing attacks  
 
 ### 2. URL & Domain Analysis
@@ -24,22 +24,22 @@ Determine whether alerts were true positives or false positives by analyzing ema
   - `amazon.biz` (spoofed domain vs legitimate `amazon.com`)  
 
 ### 3. Indicator Validation
-- Checked domains and URLs for malicious characteristics  
-- Observed patterns consistent with phishing infrastructure  
-- Identified mismatched branding and domain structure  
+- Analyzed domains and URLs for malicious characteristics  
+- Identified inconsistencies in branding and domain structure  
+- Confirmed patterns consistent with phishing infrastructure  
 
 ### 4. Network Activity Review
-- Analyzed firewall logs for outbound connections  
-- Confirmed attempted communication with flagged domains  
-- Verified that connections were blocked by security controls  
+- Reviewed firewall logs for outbound connections  
+- Identified attempted communication with malicious domains  
+- Confirmed connections were blocked by security controls  
 
 ---
 
 ## 🚨 Key Findings
 
 - Emails contained spoofed domains designed to mimic trusted brands  
-- Embedded links redirected to non-legitimate external domains  
-- Firewall logs confirmed attempted access to malicious infrastructure  
+- Embedded links redirected to malicious external domains  
+- Firewall logs confirmed attempted connections to flagged infrastructure  
 - Attack leveraged **social engineering techniques** (urgency, impersonation)  
 
 ---
@@ -54,25 +54,47 @@ Determine whether alerts were true positives or false positives by analyzing ema
 ## 📊 Analyst Assessment
 
 - Classified as **True Positive (Phishing)**  
-- Attack represents a typical phishing attempt aimed at credential harvesting or malware delivery  
-- Security controls (firewall + filtering) successfully prevented user compromise  
+- Activity is consistent with credential harvesting or malware delivery attempts  
+- Security controls successfully prevented compromise  
 
 ---
 
 ## 🛠️ Response Actions
 
 - Blocked identified malicious domains  
-- Logged and documented phishing indicators  
-- Confirmed no successful user interaction or compromise  
+- Documented phishing indicators for future detection  
+- Confirmed no successful user interaction or system compromise  
 
 ---
 
 ## 🔐 Recommendations
 
-- Implement stricter email filtering for spoofed domains  
-- Enforce domain reputation checks on embedded links  
-- Conduct user awareness training focused on phishing indicators  
-- Monitor for repeated phishing campaigns using similar infrastructure  
+- Strengthen email filtering for spoofed domains  
+- Implement domain reputation checks for embedded links  
+- Conduct user awareness training on phishing indicators  
+- Monitor for repeated campaigns using similar infrastructure  
+
+---
+
+## 🧠 Analyst Decision
+
+**Severity:** Medium  
+
+**Verdict:** True Positive  
+
+**Key Indicators:**  
+- Spoofed domain (`amazon.biz`)  
+- Social engineering language (urgency/impersonation)  
+- Malicious external links  
+- Blocked outbound connection attempts  
+
+**Summary:**  
+The alert was confirmed as a phishing attempt leveraging spoofed domains and social engineering techniques. Network controls prevented successful communication with malicious infrastructure, reducing the risk of compromise.
+
+**Recommended Actions:**  
+- Continue monitoring for similar phishing campaigns  
+- Maintain domain blocking and filtering controls  
+- Reinforce user awareness training  
 
 ---
 
@@ -80,14 +102,14 @@ Determine whether alerts were true positives or false positives by analyzing ema
 
 This investigation demonstrates the ability to:
 
-- Analyze phishing alerts and validate indicators of compromise  
-- Differentiate between legitimate and malicious domains  
-- Correlate email-based threats with network activity  
+- Validate phishing indicators and detect spoofed domains  
+- Correlate email threats with network activity  
+- Classify alerts based on evidence  
 - Apply structured SOC triage methodology  
-- Document findings and recommend appropriate mitigation steps  
+- Document findings and recommend appropriate response actions  
 
 ---
 
 ## 🧠 Key Takeaway
 
-Effective phishing detection requires more than identifying suspicious emails—it involves validating indicators, correlating activity across systems, and understanding attacker techniques to determine real risk and appropriate response.
+Effective phishing detection requires validating indicators, correlating activity across systems, and understanding attacker techniques to accurately assess risk and response.

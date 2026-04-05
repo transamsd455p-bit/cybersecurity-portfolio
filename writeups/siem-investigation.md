@@ -1,7 +1,7 @@
-# SIEM Investigation: CryptoMiner Detection
+# 🔐 SIEM Investigation: CryptoMiner Detection
 
 ## Overview
-During routine SIEM monitoring, an alert was triggered indicating potential cryptomining activity on an endpoint. This investigation analyzes the alert, validates whether the activity is malicious, and determines the appropriate response.
+During routine SIEM monitoring, an alert was triggered indicating potential cryptomining activity on an endpoint. This investigation validates the alert, analyzes supporting evidence, and determines appropriate response actions.
 
 ---
 
@@ -9,10 +9,10 @@ During routine SIEM monitoring, an alert was triggered indicating potential cryp
 
 ![SIEM Dashboard](../screenshots/siem-dashboard.png)
 
-Initial review of the SIEM dashboard revealed an anomalous process (`cudominer.exe`) not typically observed in baseline system activity. The process appeared alongside normal system processes, making it stand out as suspicious.
+Initial review identified an anomalous process (`cudominer.exe`) not consistent with baseline system activity.
 
 ### Analyst Notes
-- `cudominer.exe` is not a standard Windows process  
+- `cudominer.exe` is not a legitimate Windows process  
 - Low execution count suggests recent or isolated activity  
 - Likely introduced via user execution or a dropped payload  
 
@@ -22,10 +22,10 @@ Initial review of the SIEM dashboard revealed an anomalous process (`cudominer.e
 
 ![SIEM Alert](../screenshots/siem-alert.png)
 
-The SIEM generated an alert for **Potential CryptoMiner Activity**, indicating a rule match based on suspicious process naming conventions.
+The SIEM generated an alert for **Potential CryptoMiner Activity**, triggered by detection rules matching suspicious process names.
 
 ### Analyst Interpretation
-This alert suggests possible resource hijacking behavior, commonly associated with unauthorized cryptomining.
+The alert indicates possible unauthorized resource usage consistent with cryptomining behavior.
 
 ---
 
@@ -33,7 +33,7 @@ This alert suggests possible resource hijacking behavior, commonly associated wi
 
 ![Event Logs](../screenshots/siem-event.png)
 
-The investigation of event logs identified:
+Event log analysis identified:
 
 - **Host:** HR_02  
 - **User:** Chris  
@@ -41,8 +41,8 @@ The investigation of event logs identified:
 
 ### Key Observations
 - Execution from `Temp` directory → **highly suspicious**  
-- User-level execution → possible phishing or malicious download  
-- Process name includes “miner” → aligns with alert logic  
+- User-level execution → potential phishing or malicious download  
+- Process name includes “miner” → aligns with detection logic  
 
 ---
 
@@ -53,13 +53,10 @@ The investigation of event logs identified:
 The alert was triggered based on:
 
 - **Event ID:** 4688 (Process Creation)  
-- **Rule logic:**  
-  - Process name contains `miner` or `crypt`  
+- **Rule logic:** Process name contains `miner` or `crypt`  
 
 ### Analyst Insight
-This rule is effective for detecting known cryptomining indicators but may generate false positives if not tuned with additional context.
-
-In this case, the process name directly matched known malicious patterns, increasing confidence in the alert.
+The rule effectively detects cryptomining indicators but may require additional tuning (e.g., file path, parent process) to reduce false positives. In this case, strong contextual indicators increase confidence in malicious activity.
 
 ---
 
@@ -74,9 +71,9 @@ In this case, the process name directly matched known malicious patterns, increa
 
 ### Threat Context
 Cryptominers are commonly:
-- Delivered via phishing emails or malicious downloads  
-- Executed from temporary directories  
-- Designed to evade detection while consuming system resources  
+- Delivered via phishing or malicious downloads  
+- Executed from temporary or user-controlled directories  
+- Designed to persist while consuming system resources  
 
 ---
 
@@ -85,55 +82,63 @@ Cryptominers are commonly:
 - **T1496 – Resource Hijacking**  
 - **T1059 – Command Execution**  
 
-### Explanation
-The observed activity aligns with **Resource Hijacking**, where system resources are abused for unauthorized cryptocurrency mining.
-
 ---
 
 ## 7. Incident Response
 
 ![Response](../screenshots/siem-response.png)
 
-The alert was classified as a **True Positive**, and the affected host was isolated.
+The alert was classified as a **True Positive**, and the affected host was isolated to prevent further execution.
 
-### Analyst Decision
-- Containment required due to confirmed malicious behavior  
-- Isolation prevents further execution and potential lateral movement  
-- Additional investigation recommended to determine initial access vector  
+---
+
+## 🧠 Analyst Decision
+
+**Severity:** High  
+
+**Verdict:** True Positive  
+
+**Key Indicators:**  
+- Suspicious process (`cudominer.exe`)  
+- Execution from temporary directory (`C:\Users\Chris\temp\`)  
+- SIEM rule match for cryptomining behavior  
+- Process creation event (Event ID 4688)  
+
+**Summary:**  
+The investigation confirmed unauthorized cryptomining activity based on process behavior, execution path, and SIEM alert correlation. The activity indicates compromise or misuse of system resources.
+
+**Recommended Actions:**  
+- Isolate affected endpoint  
+- Remove malicious executable  
+- Investigate initial access vector  
+- Perform environment-wide IOC sweep  
+- Strengthen endpoint detection and monitoring controls  
 
 ---
 
 ## 8. Recommendations
 
-Based on the findings from this investigation, the following actions are recommended:
-
-- **Implement application control / allowlisting**  
-  Restrict unauthorized binaries from executing, especially from user directories such as `AppData` and `Temp`.
-
-- **Enhance monitoring of temporary directories**  
-  Configure SIEM alerts to flag process execution originating from `C:\Users\*\AppData\` and `Temp` paths.
-
-- **Tune detection rules with additional context**  
-  Improve existing rules by incorporating file path, parent process, and execution frequency to reduce false positives and improve detection accuracy.
-
-- **Perform endpoint threat hunting**  
-  Conduct a sweep across endpoints to identify similar indicators (e.g., `cudominer.exe` or similar process names).
-
-- **User awareness and initial access review**  
-  Investigate how the file was introduced (e.g., phishing, download) and reinforce user awareness training to prevent recurrence.
-
-- **Strengthen endpoint protection controls**  
-  Ensure EDR/AV solutions are configured to detect and block cryptomining behavior.
+- Implement application control / allowlisting  
+- Enhance monitoring of temporary directories  
+- Tune detection rules with additional context  
+- Perform endpoint threat hunting for similar indicators  
+- Investigate initial access vector (phishing or download)  
+- Strengthen endpoint protection controls  
 
 ---
 
 ## Conclusion
 
-This investigation confirmed unauthorized cryptomining activity on a corporate endpoint. The SIEM detection rule successfully identified the threat based on process naming patterns and execution behavior.
+This investigation confirmed unauthorized cryptomining activity on a corporate endpoint. The SIEM detection rule successfully identified the threat based on process behavior and naming patterns.
 
-This scenario highlights:
-- The importance of validating alerts  
-- Recognizing suspicious execution paths  
-- Applying structured analysis to determine impact and response  
+This scenario demonstrates:
+- Validation of SIEM alerts using supporting evidence  
+- Identification of suspicious execution paths  
+- Application of structured SOC analysis  
+- Effective incident response and containment  
 
-By expanding beyond the alert and analyzing context, this investigation reflects real-world SOC workflows and demonstrates practical experience in threat detection and incident response.
+---
+
+## 🧠 Key Takeaway
+
+Effective SIEM analysis requires validating alerts with context, correlating system activity, and applying investigative reasoning to determine impact and response.

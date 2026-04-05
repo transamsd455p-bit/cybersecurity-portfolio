@@ -6,17 +6,17 @@ Conducted a forensic analysis of a Windows 11 disk image using Autopsy to identi
 ---
 
 ## 🎯 Objectives
-- Identify evidence of unauthorized access
-- Analyze user activity and system artifacts
-- Recover deleted or hidden files
-- Determine indicators of potential data exfiltration or malicious behavior
+- Identify evidence of unauthorized access  
+- Analyze user activity and system artifacts  
+- Recover deleted or hidden files  
+- Determine indicators of potential data exfiltration or malicious behavior  
 
 ---
 
 ## 🛠 Tools Used
-- Autopsy 4.22.0
-- Windows 11 forensic disk image
-- FTK Imager
+- Autopsy 4.22.0  
+- Windows 11 forensic disk image  
+- FTK Imager  
 
 ---
 
@@ -105,43 +105,67 @@ Browser history showed access to external websites, providing additional insight
 ## 🚨 Key Evidence Identified
 
 ### Suspicious Document
-- File: `todo.docx`
-- Location: `Users\Administrator\Documents`
-- Relevance: Possible planning or preparation activity
+- File: `todo.docx`  
+- Location: `Users\Administrator\Documents`  
+- Relevance: Possible planning or preparation activity  
 
 ### Unauthorized Executable
-- File: `logger.exe`
-- Location: `Users\Administrator\Downloads`
-- Relevance: Suspicious executable in user download location
+- File: `logger.exe`  
+- Location: `Users\Administrator\Downloads`  
+- Relevance: Suspicious executable in user download location  
 
 ### Deleted Sensitive File
-- File: `secret.txt`
-- Relevance: Included instructions involving confidential information, outside communication, and evidence deletion
+- File: `secret.txt`  
+- Relevance: Included instructions involving confidential information, outside communication, and evidence deletion  
 
 ### Browser Artifacts
-- Evidence of external website access through cookies and browser history
+- Evidence of external website access through cookies and browser history  
 
 ### Program Execution
-- Prefetch artifacts confirmed execution of Microsoft Edge
+- Prefetch artifacts confirmed execution of Microsoft Edge  
 
 ### Event Logs
-- Security and system event logs helped support timeline reconstruction and system activity analysis
+- Security and system event logs helped support timeline reconstruction and system activity analysis  
 
 ---
 
 ## 🧠 Conclusion
 The forensic investigation revealed multiple artifacts indicating suspicious and potentially malicious activity on the Windows 11 system. The most significant findings included a suspicious executable (`logger.exe`), a planning-related document (`todo.docx`), and a deleted text file (`secret.txt`) containing instructions consistent with data exfiltration and concealment.
 
-Taken together, the recovered files, browser artifacts, event logs, and execution evidence support the conclusion that the system was used in a manner inconsistent with normal policy-compliant behavior and likely involved unauthorized handling of sensitive information.
+Taken together, the recovered files, browser artifacts, event logs, and execution evidence indicate likely unauthorized data handling and potential data exfiltration activity.
 
 ---
 
 ## 💡 Skills Demonstrated
-- Digital Forensics Analysis
-- Artifact Identification
-- Deleted File Recovery
-- Windows Event Log Analysis
-- Browser Artifact Analysis
-- Prefetch Analysis
-- Evidence Documentation
-- Investigative Thinking
+- Digital Forensics Analysis  
+- Artifact Identification  
+- Deleted File Recovery  
+- Windows Event Log Analysis  
+- Browser Artifact Analysis  
+- Prefetch Analysis  
+- Evidence Documentation  
+- Investigative Thinking  
+
+---
+
+## 🧠 Analyst Decision
+
+**Severity:** Medium  
+
+**Verdict:** Suspicious Activity Identified  
+
+**Key Indicators:**  
+- Presence of suspicious executable (`logger.exe`)  
+- Planning-related document (`todo.docx`) found in user directory  
+- Deleted file (`secret.txt`) containing instructions for data handling and concealment  
+- Browser artifacts indicating external website access  
+- Prefetch evidence confirming program execution  
+
+**Summary:**  
+The forensic analysis identified multiple artifacts consistent with suspicious user activity, including unauthorized files, evidence of external communication, and deliberate deletion of sensitive data. While intent cannot be definitively confirmed, the findings strongly suggest potential data exfiltration and policy violations.
+
+**Recommended Actions:**  
+- Perform deeper analysis of `logger.exe`  
+- Review user activity timeline for unauthorized actions  
+- Preserve and document evidence for further investigation  
+- Assess potential data exposure and external communication  

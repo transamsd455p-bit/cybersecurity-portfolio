@@ -1,77 +1,86 @@
-# Cybersecurity Portfolio
+# 🛡️ Cybersecurity Portfolio
 
-Hands-on cybersecurity portfolio focused on SOC alert triage, SIEM investigations, EDR analysis, and Windows digital forensics.
+Hands-on cybersecurity portfolio focused on **SOC analysis, SIEM investigations, EDR threat detection, and digital forensics**.
 
-This repository showcases practical investigations completed through platforms such as TryHackMe and WGU, with an emphasis on real-world analyst thinking, log analysis, incident documentation, and evidence-based conclusions.
-
----
-
-## Core Skills Demonstrated
-
-- SOC alert triage and incident analysis  
-- Splunk SIEM log investigation  
-- Phishing analysis and IOC identification  
-- EDR alert review and process analysis  
-- Windows digital forensics using Autopsy  
-- Evidence handling, documentation, and reporting  
+This repository demonstrates practical, real-world investigations using tools such as **Splunk, Autopsy, and EDR platforms**, with an emphasis on **analytical thinking, log correlation, and evidence-based decision-making**.
 
 ---
 
-## Featured Projects
+## 🚀 Core Skills
 
-### 🔐 SIEM Investigation: CryptoMiner Detection
-- Investigated a SIEM alert related to unauthorized cryptomining activity  
-- Analyzed event logs, validated detection logic, and identified indicators of compromise  
-- Documented findings and response actions based on observed behavior  
-
-👉 [View Project](writeups/siem-investigation.md)
-
----
-
-### 🧪 Digital Forensics Investigation (Autopsy)
-- Performed forensic analysis of a Windows 11 disk image using Autopsy  
-- Examined browser artifacts, event logs, prefetch files, and deleted data  
-- Identified suspicious files and potential data exfiltration activity  
-
-👉 [View Project](writeups/autopsy-digital-forensics.md)
+- SOC alert triage & incident analysis  
+- SIEM investigation using Splunk  
+- EDR alert analysis & process chain investigation  
+- Phishing analysis & IOC identification  
+- Windows digital forensics (Autopsy)  
+- Log analysis, correlation, and reporting  
+- MITRE ATT&CK mapping & threat classification  
 
 ---
 
-### 🛡 SOC Alert Triage (TryHackMe)
-- Investigated phishing-related alerts in a simulated SOC environment  
-- Identified malicious indicators and classified alerts as true positives  
-- Documented findings and recommended response actions  
+## 🔥 Featured Projects
 
-👉 [View Project](writeups/soc-alert-triage.md)
+### 🔎 Splunk SIEM Investigation: VPN Log Analysis  ⭐ *(New)*
+- Ingested and analyzed VPN log data in Splunk  
+- Performed user-based investigation (Maleena)  
+- Conducted geographic filtering and anomaly analysis  
+- Applied structured SIEM investigation methodology  
+
+👉 [View Project](writeups/splunk-vpn-investigation.md)
 
 ---
 
-## 🔍 Projects
-
-### 🚨 EDR Alert Investigation (TryHackMe)
-Analyzed an endpoint detection alert involving malicious Office document execution, credential dumping via LSASS, and suspicious process activity within the AppData directory.
-
-**Key Skills:**
-- EDR Analysis  
-- Process Chain Investigation  
-- IOC Identification  
-- Threat Detection  
-- MITRE ATT&CK Mapping  
-- Incident Response  
+### 🚨 EDR Alert Investigation (SOC Simulation)
+- Investigated multi-stage attack including macro execution and credential dumping  
+- Analyzed process chains and LSASS memory access  
+- Differentiated true positives vs false positives  
+- Applied MITRE ATT&CK mapping  
 
 👉 [View Project](writeups/edr-alert-investigation.md)
 
 ---
 
 ### 🔐 SIEM Investigation: CryptoMiner Detection
-Analyzed a SIEM-generated alert to investigate unauthorized cryptomining activity. Performed event log analysis, validated detection rules, identified indicators of compromise, and executed appropriate incident response actions.
-
-**Key Skills:**
-- SIEM Analysis  
-- Log Analysis  
-- Threat Detection  
-- IOC Identification  
-- MITRE ATT&CK Mapping  
-- Incident Response  
+- Investigated unauthorized cryptomining activity  
+- Analyzed process execution and detection rules  
+- Identified indicators of compromise (IOCs)  
+- Recommended containment and response actions  
 
 👉 [View Project](writeups/siem-investigation.md)
+
+---
+
+### 🧪 Digital Forensics Investigation (Autopsy)
+- Analyzed Windows 11 disk image using Autopsy  
+- Identified suspicious files, deleted evidence, and user activity  
+- Correlated event logs, browser artifacts, and execution data  
+- Documented findings supporting potential data exfiltration  
+
+👉 [View Project](writeups/autopsy-digital-forensics.md)
+
+---
+
+### 🛡 SOC Alert Triage (Phishing Investigation)
+- Investigated phishing alerts in a simulated SOC environment  
+- Identified spoofed domains and malicious indicators  
+- Validated alerts as true positives  
+- Documented findings and response recommendations  
+
+👉 [View Project](writeups/soc-alert-triage.md)
+
+---
+
+## 🧠 What This Portfolio Demonstrates
+
+- Ability to investigate real-world security scenarios  
+- Strong understanding of SOC workflows and analyst decision-making  
+- Experience working with SIEM and endpoint detection tools  
+- Ability to translate data into actionable security insights  
+
+---
+
+## 📌 Current Focus
+
+- Advancing SOC analyst skills (SIEM + EDR)  
+- Building hands-on investigation projects  
+- Expanding threat detection and incident response capabilities  

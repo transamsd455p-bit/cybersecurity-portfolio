@@ -20,11 +20,12 @@ This repository demonstrates practical, real-world investigations using tools su
 
 ## 🔥 Featured Projects
 
-### 🔎 Splunk SIEM Investigation: VPN Log Analysis  ⭐ *(New)*
+### 🔎 Splunk SIEM Investigation: VPN Log Analysis
 - Ingested and analyzed VPN log data in Splunk  
 - Performed user-based investigation (Maleena)  
 - Conducted geographic filtering and anomaly analysis  
 - Applied structured SIEM investigation methodology  
+- Focused on log querying, filtering, and user activity analysis within a SIEM environment  
 
 👉 [View Project](writeups/splunk-vpn-investigation.md)
 
@@ -84,3 +85,9 @@ This repository demonstrates practical, real-world investigations using tools su
 - Advancing SOC analyst skills (SIEM + EDR)  
 - Building hands-on investigation projects  
 - Expanding threat detection and incident response capabilities  
+
+---
+
+## 🛠 Tools & Platforms
+
+Splunk | Autopsy | TryHackMe | Windows Event Logs | EDR Simulation Environments

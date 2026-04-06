@@ -44,7 +44,7 @@ A baseline search was performed to determine total log volume.
 
 ## 👤 User Activity Investigation – Maleena
 
-![User Activity](../screenshots/splunk-user-analysis-maleena.png)
+![User Activity](../screenshots/splunk-user-activity-maleena.png)
 
 Filtered logs to identify all activity associated with user **Maleena**.
 

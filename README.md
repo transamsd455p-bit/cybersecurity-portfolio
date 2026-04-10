@@ -2,14 +2,14 @@
 
 Hands-on cybersecurity portfolio focused on **SOC analysis, SIEM investigations, EDR threat detection, and digital forensics**.
 
-This repository demonstrates practical, real-world investigations using tools such as **Splunk, Autopsy, and EDR platforms**, with an emphasis on **analytical thinking, log correlation, and evidence-based decision-making**.
+This repository demonstrates practical, real-world investigations using tools such as **Splunk, Elastic SIEM, Autopsy, and EDR platforms**, with an emphasis on **analytical thinking, log correlation, and evidence-based decision-making**.
 
 ---
 
 ## 🚀 Core Skills
 
 - SOC alert triage & incident analysis  
-- SIEM investigation using Splunk  
+- SIEM investigation using Splunk & Elastic  
 - EDR alert analysis & process chain investigation  
 - Phishing analysis & IOC identification  
 - Windows digital forensics (Autopsy)  
@@ -28,6 +28,16 @@ This repository demonstrates practical, real-world investigations using tools su
 - Focused on log querying, filtering, and user activity analysis within a SIEM environment  
 
 👉 [View Project](writeups/splunk-vpn-investigation.md)
+
+---
+
+### 🔎 Elastic SIEM VPN Log Investigation
+- Investigated VPN activity using Elastic SIEM to identify suspicious user behavior and abnormal connection patterns  
+- Performed user-based filtering, IP investigation, and geographic filtering using KQL queries  
+- Identified abnormal login behavior, suspicious IP activity, and potential post-termination account usage  
+- Analyzed time-based spikes and failed authentication patterns to assess potential security risks  
+
+👉 [View Project](writeups/elastic-siem-vpn-investigation.md)
 
 ---
 
@@ -90,4 +100,4 @@ This repository demonstrates practical, real-world investigations using tools su
 
 ## 🛠 Tools & Platforms
 
-Splunk | Autopsy | TryHackMe | Windows Event Logs | EDR Simulation Environments
+Splunk | Elastic SIEM | Autopsy | TryHackMe | Windows Event Logs | EDR Simulation Environments
